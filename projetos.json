@@ -1,0 +1,16 @@
+[
+  {
+    "categoria": "Web",
+    "id": "forno-do-bairro",
+    "titulo": "Forno do Bairro",
+    "descricao": "Um site moderno e responsivo para a Forno do Bairro, com cardápio interativo gerado via JavaScript, sistema de pedido com integração ao WhatsApp e SEO otimizado. O design foca em destacar o sabor artesanal e a identidade local da pizzaria.",
+    "technologies": ["HTML5", "CSS3", "JavaScript", "Netlify"],
+    "imagem": "https://pizzariadodh.com.br/favicon.png",
+    "client": "Forno do Bairro",
+    "year": 2025,
+    "category": "Website comercial",
+    "link": "https://pizzariadodh.com.br/",
+    "author": "Haon technologies",
+    "color": "#c0392b"
+  }
+]
