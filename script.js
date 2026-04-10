@@ -172,19 +172,17 @@ document.querySelectorAll('.projeto-card').forEach(card => {
 //* API para puxar icons dos CEO & CTO. 
 async function loadDiscordUser(userId, avatarElId, nameElId) {
   try {
-    const response = await fetch(`https://winter.squareweb.app/api/v0/users/${userId}`, {
+    const response = await fetch(`https://haon-api.vercel.app/api/v1/haon/${userId}`, {
       headers: {
-        "content-type": "application/json",
-        "x-api-key": "26082004_saphire"
+        "content-type": "application/json"
       }
     });
     const data = await response.json();
-    const user = data.user;
 
-    const avatar = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256`;
+    const avatar = `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png?size=256`;
 
     document.getElementById(avatarElId).src = avatar;
-    document.getElementById(nameElId).textContent = user.global_name || user.username;
+    document.getElementById(nameElId).textContent = data.global_name || data.username;
   } catch (err) {
     console.error(err);
   }
