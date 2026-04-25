@@ -140,8 +140,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 const logo = document.querySelector('.logo-img')
 logo.addEventListener('click', () => {
-  window.location.href = '/'
-})
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
 const hero = document.querySelector('.hero');
 window.addEventListener('scroll', () => {
