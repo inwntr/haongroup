@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haon Technologies</title>
+  <title>Haon Group</title>
   <meta name="description"
     content="Haon Technologies: Soluções digitais inovadoras, Design Digital, Desenvolvimento Web e Projetos Personalizados. Transformamos ideias em experiências únicas." />
   <meta name="keywords"
@@ -28,7 +28,6 @@
   <meta name="twitter:image" content="preview.png" />
 </head>
 
-
 <body>
   <header>
     <div class="logo">
@@ -37,165 +36,184 @@
 
     <nav class="nav-links">
       <ul>
-        <li><a class="active" href="#inicio">Home</a></li>
-        <li><a href="#historia">History</a></li>
-        <li><a href="#lideranca">Leadership</a></li>
-        <li><a href="#empresas">Companies</a></li>
-        <li><a href="#visao">Vision</a></li>
+        <li><a class="active" href="#inicio" data-i18n="navHome">Home</a></li>
+        <li><a href="#authority" data-i18n="navAuthority">Technology Group</a></li>
+        <li><a href="#build" data-i18n="navBuild">What We Build</a></li>
+        <li><a href="#sobre" data-i18n="navAbout">About</a></li>
+        <li><a href="#historia" data-i18n="navHistory">History</a></li>
+        <li><a href="#lideranca" data-i18n="navLeadership">Leadership</a></li>
+        <li><a href="#empresas" data-i18n="navCompanies">Companies</a></li>
+        <li><a href="#visao" data-i18n="navVision">Vision</a></li>
       </ul>
     </nav>
+
+    <div class="lang-dropdown">
+      <button id="langBtn">🌐</button>
+
+      <div class="lang-menu" id="langMenu">
+        <div onclick="setLanguage('en')">
+          <img src="imgs/us.png" alt="EN"> English
+        </div>
+
+        <div onclick="setLanguage('pt')">
+          <img src="imgs/br.webp" alt="PT"> Português
+        </div>
+      </div>
+    </div>
 
     <button class="menu-toggle">☰</button>
   </header>
 
-  <!-- Seção inicial -->
   <section id="inicio" class="hero">
     <div class="hero-content animate">
       <img class="img-logo" src="imgs/haongroup.png" alt="Haon Group">
       <br><br><br><br><br><br>
-      <p>
-        The <strong>Haon Group</strong> is a business group dedicated to creating
-        technological solutions, digital innovation, and product development
-        that connect people, companies, and the future of technology.
+
+      <h1 data-i18n="heroTitle">Building companies, systems, and technology for the next generation.</h1>
+
+      <p data-i18n-html="heroText">
+        <strong>Haon Group</strong> is a technology group focused on building
+        digital companies, scalable systems, and modern infrastructure
+        designed for long-term value.
       </p>
 
-      <a href="#sobre" class="btn">Meet the Group</a>
+      <a href="#sobre" class="btn" data-i18n="heroBtn">Explore the Group</a>
     </div>
   </section>
 
+  <section id="authority" class="section authority-section">
+    <div class="authority-grid">
+      <div class="authority-item">
+        <h3 data-i18n="authorityOneTitle">Technology Group</h3>
+        <p data-i18n="authorityOneText">Built to create and scale digital companies.</p>
+      </div>
+
+      <div class="authority-item">
+        <h3 data-i18n="authorityTwoTitle">Long-Term Vision</h3>
+        <p data-i18n="authorityTwoText">Focused on sustainable growth and lasting value.</p>
+      </div>
+
+      <div class="authority-item">
+        <h3 data-i18n="authorityThreeTitle">Digital Infrastructure</h3>
+        <p data-i18n="authorityThreeText">Systems, platforms, and products designed for the future.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="build" class="section">
+    <h2 data-i18n="buildTitle">What We Build</h2>
+
+    <p data-i18n-html="buildText">
+      We build digital companies, scalable systems, and modern infrastructure
+      designed for long-term relevance.
+
+      Our focus is centered on creating products, platforms, and technological
+      structures that combine engineering, execution, and strategic vision.
+    </p>
+  </section>
+
   <section id="sobre" class="section">
-    <h2>About Haon Group</h2>
-    <p>
-      The <strong>Haon Group</strong> is a business group focused on innovation,
-      technology, and the development of modern digital solutions.
+    <h2 data-i18n="aboutTitle">About Haon Group</h2>
 
-      The initiative began with the creation of <strong>Haon Technologies</strong>,
-      a company dedicated to software engineering, web development,
-      systems, and digital solutions.
-
-      With a long-term vision, Haon Group aims to build an ecosystem
-      of companies centered on technology, innovation, and new products,
-      continuously expanding its areas of expertise.
+    <p data-i18n-html="aboutText1">
+      <strong>Haon Group</strong> was created to structure and expand technology-driven
+      companies with clarity, consistency, and long-term direction.
     </p>
-    <p>
-      Our goal is to develop solutions that connect technology,
-      engineering, and creativity to create a tangible impact in the digital world.
+
+    <p data-i18n-html="aboutText2">
+      Through its ecosystem, the group brings together strategic vision,
+      technical execution, and product development to support solutions
+      built for growth, relevance, and real-world impact.
     </p>
   </section>
 
-  <!-- Seção sobre -->
   <section id="historia" class="section">
-    <h2>Our History</h2>
+    <h2 data-i18n="historyTitle">Our Foundation</h2>
 
-    <p>
-      The <strong>Haon Group</strong> was born from the vision of creating
-      an ecosystem of companies focused on technology, innovation, and
-      modern digital solutions.
-
-      It all started with the founding of <strong>Haon Technologies</strong>,
-      a company dedicated to systems development, digital experiences,
-      and software engineering.
-
-      As projects grew and the strategic vision expanded, the idea emerged
-      to structure a business group capable of bringing together
-      different areas of technology — from software and automation
-      to hardware and innovation.
-
-      Today, Haon Group serves as a foundation for creating new companies,
-      products, and solutions that will continuously evolve over the years,
-      always guided by innovation, engineering, and creativity.
+    <p data-i18n-html="historyText">
+      <strong>Haon Group</strong> was established as the foundation for a long-term
+      technology structure built to create, support, and scale modern digital ventures.
     </p>
   </section>
 
-  <!-- Seção serviços -->
   <section id="lideranca" class="section">
-    <h2>Leadership</h2>
+    <h2 data-i18n="leadershipTitle">Executive Leadership</h2>
+
     <div class="cards">
       <div class="card">
         <img id="ceo-avatar" src="imgs/default-avatar.png" alt="CEO">
         <h3 id="ceo-name">CEO</h3>
-        <p id="ceo-role">
+        <p id="ceo-role" data-i18n-html="ceoText">
           <strong><span class="ceoclass">Chief Executive Officer</span></strong><br><br>
-          Oversees the company's strategic vision, making crucial decisions for
-          innovation and growth. Ensures that each project aligns with the objectives
-          of the Haon Group.
+          Leads strategic direction, long-term vision, and organizational growth across the group.
         </p>
       </div>
 
       <div class="card">
         <img id="cto-avatar" src="imgs/default-avatar.png" alt="CTO">
         <h3 id="cto-name">CTO</h3>
-        <p id="cto-role">
+        <p id="cto-role" data-i18n-html="ctoText">
           <strong><span class="ctoclass">Chief Technology Officer</span></strong><br><br>
-          Supervises all technical solutions, ensuring excellence in software
-          development, systems, and technological innovation within the Haon Group.
+          Oversees technology, systems architecture, and technical execution across all operations.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Seção como fazemos -->
   <section id="empresas" class="section">
-    <h2>Group Companies</h2>
+    <h2 data-i18n="companiesTitle">Group Structure</h2>
+
     <div class="cards">
       <div class="card">
         <img src="imgs/favicon.png" alt="Haon Technologies">
         <h3>Haon Technologies</h3>
-        <p>
-          Company focused on software development, systems,
-          web solutions, APIs, and digital products.
+        <p data-i18n="haonTechText">
+          Software engineering, digital systems, web infrastructure, and product development.
         </p>
-        <a class="visit" href="https://haontechnologies.netlify.app" target="_blank">Visit</a>
+        <a class="visit" href="https://haontechnologies.netlify.app" target="_blank" data-i18n="visit">Visit</a>
       </div>
+
       <div class="card">
         <img src="imgs/icon.png" alt="Haon Systems">
         <h3>Haon Systems</h3>
-        <p>
-          Data not provided or private!
+        <p data-i18n="haonSystemsText">
+          Infrastructure, technical operations, and systems architecture.
         </p>
       </div>
+
       <div class="card">
         <img src="imgs/icon.png" alt="Haon Labs">
         <h3>Haon Labs</h3>
-        <p>
-          Data not provided or private!
+        <p data-i18n="haonLabsText">
+          Research, automation, and emerging technology development.
         </p>
       </div>
     </div>
   </section>
 
   <section id="visao" class="section">
-    <h2>Our Vision</h2>
+    <h2 data-i18n="visionTitle">Our Vision</h2>
 
-    <p>
-      The goal of <strong>Haon Group</strong> is to build a global
-      technology ecosystem capable of developing innovative solutions
-      in software, hardware, and digital platforms.
-
-      Our vision is to continuously expand our companies,
-      creating products, services, and technologies that contribute
-      to the advancement of the digital universe.
-
-      Every new company created within the group represents a step
-      towards a future where innovation, engineering, and creativity
-      walk hand in hand.
+    <p data-i18n-html="visionText">
+      <strong>Haon Group</strong> is built to become a global technology
+      ecosystem focused on developing companies, systems, and infrastructure
+      with long-term strategic value.
     </p>
   </section>
 
-  <!-- Rodapé -->
   <footer>
     <div class="footer-container">
       <div class="footer-section footer-brand">
         <img src="imgs/haongroup.png" alt="Haon Group Logo" class="footer-logo">
-        <p>
-          <strong>Haon Group</strong> is a business group dedicated to
-          technology development, digital innovation, and creating solutions
-          that connect companies and people to the future.
+
+        <p data-i18n-html="footerBrand">
+          <strong>Haon Group</strong> builds companies, systems, and digital
+          infrastructure designed for long-term relevance.
         </p>
       </div>
 
       <div class="footer-section">
-        <h3>Companies</h3>
+        <h3 data-i18n="footerStructure">Structure</h3>
         <a href="https://haontechnologies.netlify.app" target="_blank" rel="noopener noreferrer">
           Haon Technologies
         </a>
@@ -204,21 +222,21 @@
       </div>
 
       <div class="footer-section">
-        <h3>Links</h3>
-        <a href="#inicio">Home</a>
-        <a href="#sobre">About</a>
-        <a href="#empresas">Companies</a>
-        <a href="#visao">Vision</a>
+        <h3 data-i18n="footerNavigation">Navigation</h3>
+        <a href="#inicio" data-i18n="navHome">Home</a>
+        <a href="#build" data-i18n="buildTitle">What We Build</a>
+        <a href="#empresas" data-i18n="companiesTitle">Group Structure</a>
+        <a href="#visao" data-i18n="navVision">Vision</a>
       </div>
 
       <div class="footer-section">
-        <h3>contact</h3>
+        <h3 data-i18n="footerContact">Contact</h3>
         <a href="mailto:contact@haongroup.com">contact@haongroup.com</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>Haon Group © 2026 — All rights reserved.</p>
+      <p data-i18n="footerRights">Haon Group © 2026 — All rights reserved.</p>
     </div>
   </footer>
 
@@ -230,7 +248,6 @@
   </div>
 
   <script src="script.js"></script>
-
 </body>
 
 </html>
