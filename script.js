@@ -210,8 +210,9 @@ const translations = {
     navCompanies: "Companies",
     navVision: "Vision",
 
+    heroBase: "A technology group focused on long-term digital infrastructure.",
     heroTitle: "Building companies, systems, and technology for the next generation.",
-    heroText: `<strong>Haon Group</strong> is a technology group focused on building digital companies, scalable systems, and modern infrastructure designed for long-term value.`,
+    heroText: `<strong>Haon Group</strong> builds digital companies, scalable systems, and long-term infrastructure.`,
     heroBtn: "Explore the Group",
 
     aboutTitle: "About Haon Group",
@@ -265,8 +266,9 @@ Our focus is centered on creating products, platforms, and technological structu
     navCompanies: "Empresas",
     navVision: "Visão",
 
+    heroBase: "Um grupo tecnológico focado em infraestrutura digital de longo prazo.",
     heroTitle: "Construindo empresas, sistemas e tecnologia para a próxima geração.",
-    heroText: `<strong>Haon Group</strong> é um grupo de tecnologia focado na construção de empresas digitais, sistemas escaláveis e infraestrutura moderna projetada para valor de longo prazo.`,
+    heroText: `<strong>Haon Group</strong> Constrói empresas digitais, sistemas escaláveis ​​e infraestrutura de longo prazo.`,
     heroBtn: "Conheça o Grupo",
 
     aboutTitle: "Sobre o Haon Group",
