@@ -3,7 +3,7 @@ const navLinks = document.querySelector('.nav-links');
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active'); // ativa/desativa o menu
+    navLinks.classList.toggle('active');
   });
 }
 
@@ -77,67 +77,6 @@ window.addEventListener('scroll', () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const grid = document.getElementById("portfolioGrid");
-  const filtros = document.querySelectorAll(".filtro");
-
-  if (grid) {
-    try {
-      const res = await fetch("/projetos.json");
-      const projetos = await res.json();
-
-      function renderizar(categoria = "todos") {
-        grid.innerHTML = "";
-        const filtrados = categoria === "todos"
-          ? projetos
-          : projetos.filter(p => p.categoria === categoria);
-
-        filtrados.forEach((p, index) => {
-          const card = document.createElement("div");
-          card.classList.add("projeto-card");
-          card.style.animationDelay = `${index * 0.2}s`;
-          card.innerHTML = `
-            <img src="${p.imagem}" alt="${p.titulo}">
-            <div class="projeto-info">
-              <h3>${p.titulo}</h3>
-              <p>${p.descricao}</p>
-              <a href="${p.link}" target="_blank">Ver Projeto ↗</a>
-            </div>
-          `;
-          grid.appendChild(card);
-
-          // efeito de brilho dentro do render
-          card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--x', `${x}px`);
-            card.style.setProperty('--y', `${y}px`);
-          });
-          card.addEventListener('mouseleave', () => {
-            card.style.setProperty('--x', `50%`);
-            card.style.setProperty('--y', `50%`);
-          });
-        });
-      }
-
-      renderizar();
-
-      filtros.forEach(btn => {
-        btn.addEventListener("click", () => {
-          filtros.forEach(f => f.classList.remove("ativo"));
-          btn.classList.add("ativo");
-          renderizar(btn.dataset.cat);
-          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      });
-
-    } catch (err) {
-      grid.innerHTML = "<p>Erro ao carregar portfólio 😢</p>";
-    }
-  }
-});
-
 const logo = document.querySelector('.logo-img')
 logo.addEventListener('click', () => {
   window.scrollTo({
@@ -191,10 +130,7 @@ async function loadDiscordUser(userId, avatarElId, nameElId) {
   }
 }
 
-// CEO
 loadDiscordUser("504786925085917229", "ceo-avatar", "ceo-name");
-
-// CTO
 loadDiscordUser("1119661939002458193", "cto-avatar", "cto-name");
 
 const translations = {
@@ -313,12 +249,73 @@ Nosso foco está na criação de produtos, plataformas e estruturas tecnológica
     haonTechText: "Engenharia de software, sistemas digitais, infraestrutura web e desenvolvimento de produtos.",
     haonSystemsText: "Infraestrutura, operações técnicas e arquitetura de sistemas.",
     haonLabsText: "Pesquisa, automação e desenvolvimento de tecnologias emergentes.",
+  },
+
+    kr: {
+    pageTitle: "하온그룹",
+
+    navHome: "시작",
+    navAuthority: "기술 그룹",
+    navBuild: "우리가 만든 것",
+    navAbout: "~에",
+    navHistory: "역사",
+    navLeadership: "지도",
+    navCompanies: "회사",
+    navVision: "비전",
+
+    heroBase: "장기적인 디지털 인프라 구축에 집중하는 기술 그룹.",
+    heroTitle: "차세대 기업, 시스템 및 기술을 구축합니다.",
+    heroText: `<strong>하온그룹</strong> 이 회사는 디지털 비즈니스, 확장 가능한 시스템 및 장기적인 인프라를 구축합니다.`,
+    heroBtn: "그룹을 만나보세요",
+
+    aboutTitle: "에 대한 하온그룹",
+    aboutText1: `그만큼 <strong>하온그룹</strong> 이는 기술 중심 기업을 명확성, 일관성 및 장기적인 방향성을 가지고 구조화하고 확장하기 위해 만들어졌습니다.`,
+    aboutText2: `그룹은 자체 생태계를 통해 전략적 비전, 기술적 실행력, 제품 개발을 결합하여 성장, 관련성 및 실질적인 영향력을 위한 솔루션을 지원합니다.`,
+
+    historyTitle: "우리의 기지",
+    historyText: `그만큼 <strong>하온그룹</strong> 이는 현대 디지털 사업을 개발, 유지 및 확장하기 위해 만들어진 장기적인 기술 프레임워크의 기반으로 설립되었습니다.`,
+
+    leadershipTitle: "경영진 리더십",
+    ceoText: `<strong><span class="ceoclass">전무이사</span></strong><br><br>그룹의 전략적 방향, 장기 비전 및 조직 성장을 주도합니다.`,
+    ctoText: `<strong><span class="ctoclass">기술 이사</span></strong><br><br>전체 운영 과정에서 기술, 시스템 아키텍처 및 기술 실행을 감독합니다.`,
+
+    companiesTitle: "그룹 구조",
+    haonTechText: "소프트웨어 엔지니어링, 디지털 시스템, 웹 인프라 및 제품 개발.",
+    haonSystemsText: "인프라, 기술 운영 및 시스템 아키텍처.",
+    haonLabsText: "신기술 연구, 자동화 및 개발.",
+    visit: "방문하다",
+
+    visionTitle: "우리의 비전",
+    visionText: `그만큼 <strong>하온그룹</strong> 이곳은 장기적인 전략적 가치를 지닌 비즈니스, 시스템 및 인프라 개발에 중점을 둔 글로벌 기술 생태계로 구축되었습니다.`,
+
+    footerBrand: `<strong>하온그룹</strong> 이 회사는 장기적인 관련성을 고려하여 설계된 기업, 시스템 및 디지털 인프라를 구축합니다.`,
+    footerStructure: "구조",
+    footerNavigation: "항해",
+    footerContact: "연락하다",
+    footerRights: "하온그룹 © 2026 — 모든 권리 보유.",
+
+    authorityOneTitle: "기술그룹",
+    authorityOneText: "디지털 비즈니스를 개발하고 확장하기 위해 만들어졌습니다.",
+    authorityTwoTitle: "장기 비전",
+    authorityTwoText: "지속 가능한 성장과 지속적인 가치에 중점을 둡니다.",
+    authorityThreeTitle: "디지털 인프라",
+    authorityThreeText: "미래를 위한 시스템, 플랫폼 및 제품들.",
+
+    buildTitle: "우리가 만든 것",
+    buildText: `우리는 장기적인 관련성을 고려하여 설계된 디지털 비즈니스, 확장 가능한 시스템 및 현대적인 인프라를 구축합니다.
+
+저희는 엔지니어링, 실행력, 전략적 비전을 결합한 제품, 플랫폼 및 기술 프레임워크를 개발하는 데 집중하고 있습니다.`,
+
+    companiesTitle: "그룹 구조",
+    haonTechText: "소프트웨어 엔지니어링, 디지털 시스템, 웹 인프라 및 제품 개발.",
+    haonSystemsText: "인프라, 기술 운영 및 시스템 아키텍처.",
+    haonLabsText: "신기술 연구, 자동화 및 개발.",
   }
 };
 
 function setLanguage(lang) {
   localStorage.setItem("lang", lang);
-  document.documentElement.lang = lang === "pt" ? "pt-BR" : "en-US";
+  document.documentElement.lang = lang === "pt" ? "pt-BR" : lang === "en" ? "en-US" : "ko-KR";
   document.title = translations[lang].pageTitle;
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -354,4 +351,4 @@ if (langBtn && langMenu) {
   });
 }
 
-setLanguage(localStorage.getItem("lang") || "en");
+setLanguage(localStorage.getItem("lang") || "en" || "pt" || "kr");
