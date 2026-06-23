@@ -42,7 +42,7 @@ This structure was designed to simulate a scalable group architecture with long-
 ## Features
 
 - Institutional multi-section landing page
-- Bilingual structure (EN / PT-BR)
+- Trilingual structure (EN / PT-BR / KO)
 - Premium dark interface with black & gold identity
 - Corporate group positioning
 - Scalable multi-brand presentation
